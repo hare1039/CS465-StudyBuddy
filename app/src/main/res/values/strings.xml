@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">465-StudyBuddy</string>
+    <string name="title_activity_main_maps">Map</string>
+    <string name="People">People</string>
+    <string name="my_profile">My Profile</string>
+    <string name="requests_list">Requests</string>
+    <string name="messages">Messages</string>
+</resources>
