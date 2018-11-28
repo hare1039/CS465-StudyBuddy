@@ -25,6 +25,10 @@ public class MainProfileActivity extends Activity {
         nameTV.setText("Jordan\nClarkson");
         nameTV.setTextSize(32);
 
+        TextView userString = v.findViewById(R.id.profile_user_string);
+        userString.setText("AEROSPACE ENGINEERING CLASS OF 2020");
+        userString.setTextSize(20);
+
         String[] classes = {"CS465", "CS425", "ECE400"};
         LinearLayout ll = v.findViewById(R.id.profile_classes);
 
