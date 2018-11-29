@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPeopleFeedActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:background="#FFF"
+            android:id="@+id/people_list">
+
+            <TableRow
+                android:layout_margin="4dp"
+                android:background="@drawable/border"
+                android:clickable="true"
+                android:spinnerMode="dialog" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:gravity="center"
+                        android:src="@drawable/profile" />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="Jordan Clark"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:ellipsize="none"
+                    android:maxLines="100"
+                    android:singleLine="false"
+                    android:scrollHorizontally="false"
+                    android:text="NEED HELP ON CS465 UI HW3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="4dp"
+                android:background="@drawable/border"
+                android:clickable="true"
+                android:spinnerMode="dialog" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:gravity="center"
+                        android:src="@drawable/profile" />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="Jordan Clark"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:ellipsize="none"
+                    android:maxLines="100"
+                    android:singleLine="false"
+                    android:scrollHorizontally="false"
+                    android:text="NEED HELP ON CS465 UI HW3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="4dp"
+                android:background="@drawable/border"
+                android:clickable="true"
+                android:spinnerMode="dialog" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:gravity="center"
+                        android:src="@drawable/profile" />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="Jordan Clark"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:ellipsize="none"
+                    android:maxLines="100"
+                    android:singleLine="false"
+                    android:scrollHorizontally="false"
+                    android:text="NEED HELP ON CS465 UI HW3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="4dp"
+                android:background="@drawable/border"
+                android:clickable="true"
+                android:spinnerMode="dialog" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:gravity="center"
+                        android:src="@drawable/profile" />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="Jordan Clark"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:ellipsize="none"
+                    android:maxLines="100"
+                    android:singleLine="false"
+                    android:scrollHorizontally="false"
+                    android:text="NEED HELP ON CS465 UI HW3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_margin="4dp"
+                android:background="@drawable/border"
+                android:clickable="true"
+                android:spinnerMode="dialog" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:gravity="center"
+                        android:src="@drawable/list" />
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="Jordan Clark"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:ellipsize="none"
+                    android:maxLines="100"
+                    android:singleLine="false"
+                    android:scrollHorizontally="false"
+                    android:text="NEED HELP ON CS465 UI HW3" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</FrameLayout>
