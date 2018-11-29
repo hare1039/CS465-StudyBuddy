@@ -6,24 +6,36 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
-public class MainProfileActivity extends Activity {
+public class MainProfileActivity extends MainMapsActivity {
 
+    private ImageButton back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         // classes[] is using dynamic view, so first get an inflater than set the view
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(R.layout.activity_main_profile, null);
 
+        back = v.findViewById(R.id.back_button);
+        back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Code here executes on main thread after user presses button
+                finish();
+            }
+        });
+
         setContentView(R.layout.activity_main_profile);
         TextView nameTV = v.findViewById(R.id.profile_name);
-        nameTV.setText("Jordan\nClarkson");
-        nameTV.setTextSize(32);
+        nameTV.setText("Jordan Clarkson");
+        nameTV.setTextSize(30);
 
         TextView userString = v.findViewById(R.id.profile_user_string);
         userString.setText("AEROSPACE ENGINEERING CLASS OF 2020");

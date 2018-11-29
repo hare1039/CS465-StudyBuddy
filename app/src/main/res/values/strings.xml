@@ -1,8 +1,15 @@
 <resources>
     <string name="app_name">465-StudyBuddy</string>
-    <string name="title_activity_main_maps">Map</string>
+    <string name="title_activity_main_maps">StudyBuddy</string>
     <string name="People">People</string>
-    <string name="my_profile">My Profile</string>
+    <string name="my_profile">Profile</string>
     <string name="requests_list">Requests</string>
     <string name="messages">Messages</string>
+    <string name="title_activity_profile">My Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_peo_req_tabs">PeoReqTabs</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>
