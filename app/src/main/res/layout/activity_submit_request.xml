@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SubmitRequestActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Relevant Subject"
+            android:textSize="32sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:stretchColumns="1">
+                <TableRow
+                    android:clickable="true"
+                    android:spinnerMode="dialog"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CS465"
+                        android:textSize="25sp"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#FF000000" />
+                <TableRow
+                    android:clickable="true"
+                    android:spinnerMode="dialog"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CS465"
+                        android:textSize="25sp"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#FF000000" />
+                <TableRow
+                    android:clickable="true"
+                    android:spinnerMode="dialog"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CS465"
+                        android:textSize="25sp"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#FF000000" />
+                <TableRow
+                    android:clickable="true"
+                    android:spinnerMode="dialog"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CS465"
+                        android:textSize="25sp"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#FF000000" />
+                <TableRow
+                    android:clickable="true"
+                    android:spinnerMode="dialog"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CS465"
+                        android:textSize="25sp"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#FF000000" />
+                <TableRow
+                    android:clickable="true"
+                    android:spinnerMode="dialog"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CS465"
+                        android:textSize="25sp"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#FF000000" />
+                <TableRow
+                    android:clickable="true"
+                    android:spinnerMode="dialog"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CS465"
+                        android:textSize="25sp"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#FF000000" />
+
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Relevant Comments"
+            android:textSize="32sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:background="@drawable/border"
+            android:autofillHints="input request" />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:textSize="32sp"/>
+
+</LinearLayout>
