@@ -49,6 +49,10 @@
             android:label="SubmitRequest"
             android:windowSoftInputMode="stateHidden|adjustResize"
             />
+        <activity android:name=".OtherProfileActivity"
+            android:label="OtherPerson" />
+        <activity android:name=".message_screen"
+            android:label="messaging_someone"/>
     </application>
 
 </manifest>

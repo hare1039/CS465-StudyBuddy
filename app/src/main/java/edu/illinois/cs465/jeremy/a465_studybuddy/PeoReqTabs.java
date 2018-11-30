@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.TableRow;
 import android.widget.TextView;
 
 public class PeoReqTabs extends AppCompatActivity {
@@ -117,6 +118,9 @@ public class PeoReqTabs extends AppCompatActivity {
          * The fragment argument representing the section number for this
          * fragment.
          */
+        private View rootView;
+        private TableRow tr;
+
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
@@ -137,10 +141,19 @@ public class PeoReqTabs extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.activity_main_people_feed, container, false);
+             rootView = inflater.inflate(R.layout.activity_main_people_feed, container, false);
+
+             tr = (TableRow) (rootView.findViewById(R.id.user_sus));
+             tr.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+                     startActivity(new Intent(rootView.getContext(), OtherProfileActivity.class));
+                 }
+             });
             //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
+            //TableRow tr = new TableRow(this);
         }
     }
 
@@ -149,6 +162,10 @@ public class PeoReqTabs extends AppCompatActivity {
          * The fragment argument representing the section number for this
          * fragment.
          */
+
+        private View rootView;
+        private TableRow tr;
+
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public ReqFrag() {
@@ -169,7 +186,16 @@ public class PeoReqTabs extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.activity_main_request_feed, container, false);
+            rootView = inflater.inflate(R.layout.activity_main_request_feed, container, false);
+
+            tr = (TableRow) (rootView.findViewById(R.id.req_sus));
+            tr.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(rootView.getContext(), OtherProfileActivity.class));
+                }
+            });
+
             //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;

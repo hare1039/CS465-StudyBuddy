@@ -3,6 +3,7 @@ package edu.illinois.cs465.jeremy.a465_studybuddy;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
+import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
@@ -17,8 +18,17 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 import static android.view.View.*;
 
@@ -68,6 +78,7 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
                                 return true;
                             case R.id.messages:
                                 //TODO
+                                startActivity(new Intent(MainMapsActivity.this, message_screen.class));
                                 return true;
                         }
                         return false;
@@ -108,6 +119,20 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
         mMap.addMarker(new MarkerOptions().position(grainger).title("5 Users Here"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(grainger, zoom));
         final CameraUpdate start = CameraUpdateFactory.newLatLngZoom(grainger, zoom);
+
+        Circle startRad = googleMap.addCircle(new CircleOptions()
+        .center(grainger)
+        .radius(50.0f));
+        startRad.setVisible(false);
+
+        float darker_green = 105.0f;
+        for (int i = 0; i < 4; i++) {
+            LatLng new_marker = getRandomLocation(grainger, 250);
+
+            mMap.addMarker( new MarkerOptions().position(new_marker)
+            .title("User Here")
+            .icon(getMarkerIcon("#1b7801")));
+        }
         //mMap.animateCamera(CameraUpdateFactory.zoomTo(zoom));
 
         //fab.setVisibility(View.INVISIBLE);
@@ -144,5 +169,54 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
 
             }
         });
+    }
+
+
+
+    // method definition
+    public BitmapDescriptor getMarkerIcon(String color) {
+        float[] hsv = new float[3];
+        Color.colorToHSV(Color.parseColor(color), hsv);
+        return BitmapDescriptorFactory.defaultMarker(hsv[0]);
+    }
+
+    public LatLng getRandomLocation(LatLng point, int radius) {
+
+        List<LatLng> randomPoints = new ArrayList<>();
+        List<Float> randomDistances = new ArrayList<>();
+        Location myLocation = new Location("");
+        myLocation.setLatitude(point.latitude);
+        myLocation.setLongitude(point.longitude);
+
+        double x0 = point.latitude;
+        double y0 = point.longitude;
+
+        Random random = new Random();
+
+        // Convert radius from meters to degrees
+        double radiusInDegrees = radius / 111000f;
+
+        double u = random.nextDouble();
+        double v = random.nextDouble();
+        double w = radiusInDegrees * Math.sqrt(u);
+        double t = 2 * Math.PI * v;
+        double x = w * Math.cos(t);
+        double y = w * Math.sin(t);
+
+        // Adjust the x-coordinate for the shrinking of the east-west distances
+        double new_x = x / Math.cos(y0);
+
+        double foundLatitude = new_x + x0;
+        double foundLongitude = y + y0;
+        LatLng randomLatLng = new LatLng(foundLatitude, foundLongitude);
+
+
+       /* randomPoints.add(randomLatLng);
+        Location l1 = new Location("");
+        l1.setLatitude(randomLatLng.latitude);
+        l1.setLongitude(randomLatLng.longitude);
+        randomDistances.add(l1.distanceTo(myLocation));*/
+
+        return randomLatLng;
     }
 }
