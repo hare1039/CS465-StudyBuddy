@@ -1,5 +1,6 @@
 package edu.illinois.cs465.jeremy.a465_studybuddy;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -79,8 +80,7 @@ public class PeoReqTabs extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                startActivity(new Intent(PeoReqTabs.this, SubmitRequestActivity.class));
             }
         });
 
@@ -169,7 +169,7 @@ public class PeoReqTabs extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.activity_main_profile, container, false);
+            View rootView = inflater.inflate(R.layout.activity_main_request_feed, container, false);
             //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;

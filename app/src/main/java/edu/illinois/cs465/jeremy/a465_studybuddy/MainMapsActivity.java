@@ -60,7 +60,7 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
                                 return true;
                             case R.id.requests_list:
                                 // TODO
-                                startActivity(new Intent(MainMapsActivity.this, PeoReqTabs.class));
+                                startActivity(new Intent(MainMapsActivity.this, SubmitRequestActivity.class));
                                 return true;
                             case R.id.my_profile:
                                 // TODO

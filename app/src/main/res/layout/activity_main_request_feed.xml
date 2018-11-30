@@ -38,7 +38,7 @@
                         android:layout_width="100dp"
                         android:layout_height="20dp"
                         android:gravity="center"
-                        android:text="Jordan Clark"/>
+                        android:text="David Sarich"/>
                 </LinearLayout>
 
                 <TextView
@@ -71,7 +71,7 @@
                         android:layout_width="100dp"
                         android:layout_height="20dp"
                         android:gravity="center"
-                        android:text="Jordan Clark"/>
+                        android:text="Susan Ann"/>
                 </LinearLayout>
 
                 <TextView
@@ -82,7 +82,7 @@
                     android:maxLines="100"
                     android:singleLine="false"
                     android:scrollHorizontally="false"
-                    android:text="NEED HELP ON CS465 UI HW3" />
+                    android:text="CS241 - MP3" />
             </TableRow>
 
             <TableRow
@@ -115,7 +115,7 @@
                     android:maxLines="100"
                     android:singleLine="false"
                     android:scrollHorizontally="false"
-                    android:text="NEED HELP ON CS465 UI HW3" />
+                    android:text="242 STUDIO DUE TONIGHT HELP" />
             </TableRow>
 
             <TableRow
@@ -137,7 +137,7 @@
                         android:layout_width="100dp"
                         android:layout_height="20dp"
                         android:gravity="center"
-                        android:text="Jordan Clark"/>
+                        android:text="Anush Valen.."/>
                 </LinearLayout>
 
                 <TextView
@@ -148,7 +148,7 @@
                     android:maxLines="100"
                     android:singleLine="false"
                     android:scrollHorizontally="false"
-                    android:text="NEED HELP ON CS465 UI HW3" />
+                    android:text="Anyone in RHET 105 wanna do peer review" />
             </TableRow>
 
             <TableRow
@@ -170,7 +170,7 @@
                         android:layout_width="100dp"
                         android:layout_height="20dp"
                         android:gravity="center"
-                        android:text="Jordan Clark"/>
+                        android:text="Penny Long"/>
                 </LinearLayout>
 
                 <TextView
@@ -181,7 +181,7 @@
                     android:maxLines="100"
                     android:singleLine="false"
                     android:scrollHorizontally="false"
-                    android:text="NEED HELP ON CS465 UI HW3" />
+                    android:text="PARTNERS DROPPED. Need 465 Project Partners" />
             </TableRow>
         </TableLayout>
     </ScrollView>

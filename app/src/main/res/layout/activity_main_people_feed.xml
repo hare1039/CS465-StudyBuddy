@@ -29,27 +29,45 @@
                     android:layout_height="100dp"
                     android:gravity="center"
                     android:orientation="vertical">
+
+
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="80dp"
                         android:gravity="center"
                         android:src="@drawable/profile" />
+
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="20dp"
                         android:gravity="center"
-                        android:text="Jordan Clark"/>
+                        android:text="Susan Ann"/>
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:ellipsize="none"
-                    android:maxLines="100"
-                    android:singleLine="false"
-                    android:scrollHorizontally="false"
-                    android:text="NEED HELP ON CS465 UI HW3" />
+
+                <LinearLayout
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_dis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="100 feet away"
+                        android:layout_marginBottom="5sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/user_dis"
+                        android:ellipsize="none"
+                        android:gravity="center_vertical"
+                        android:maxLines="100"
+                        android:scrollHorizontally="false"
+                        android:singleLine="false"
+                        android:text="Computer Science - '20" />
+
+                </LinearLayout>
+
             </TableRow>
 
             <TableRow
@@ -74,15 +92,28 @@
                         android:text="Jordan Clark"/>
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:ellipsize="none"
-                    android:maxLines="100"
-                    android:singleLine="false"
-                    android:scrollHorizontally="false"
-                    android:text="NEED HELP ON CS465 UI HW3" />
+                <LinearLayout
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_dis1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="100 feet away"
+                        android:layout_marginBottom="5sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/user_dis1"
+                        android:ellipsize="none"
+                        android:gravity="center_vertical"
+                        android:maxLines="100"
+                        android:scrollHorizontally="false"
+                        android:singleLine="false"
+                        android:text="Aerospace Engineering - '18" />
+
+                </LinearLayout>
             </TableRow>
 
             <TableRow
@@ -104,18 +135,31 @@
                         android:layout_width="100dp"
                         android:layout_height="20dp"
                         android:gravity="center"
-                        android:text="Jordan Clark"/>
+                        android:text="Erik Leaf"/>
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:ellipsize="none"
-                    android:maxLines="100"
-                    android:singleLine="false"
-                    android:scrollHorizontally="false"
-                    android:text="NEED HELP ON CS465 UI HW3" />
+                <LinearLayout
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_dis2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="100 feet away"
+                        android:layout_marginBottom="5sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/user_dis2"
+                        android:ellipsize="none"
+                        android:gravity="center_vertical"
+                        android:maxLines="100"
+                        android:scrollHorizontally="false"
+                        android:singleLine="false"
+                        android:text="Food Science - '19" />
+
+                </LinearLayout>
             </TableRow>
 
             <TableRow
@@ -137,18 +181,31 @@
                         android:layout_width="100dp"
                         android:layout_height="20dp"
                         android:gravity="center"
-                        android:text="Jordan Clark"/>
+                        android:text="Lucy Triage"/>
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:ellipsize="none"
-                    android:maxLines="100"
-                    android:singleLine="false"
-                    android:scrollHorizontally="false"
-                    android:text="NEED HELP ON CS465 UI HW3" />
+                <LinearLayout
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_dis3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0.6 miles away"
+                        android:layout_marginBottom="5sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/user_dis3"
+                        android:ellipsize="none"
+                        android:gravity="center_vertical"
+                        android:maxLines="100"
+                        android:scrollHorizontally="false"
+                        android:singleLine="false"
+                        android:text="Food Science - '22" />
+
+                </LinearLayout>
             </TableRow>
 
             <TableRow
@@ -170,18 +227,32 @@
                         android:layout_width="100dp"
                         android:layout_height="20dp"
                         android:gravity="center"
-                        android:text="Jordan Clark"/>
+                        android:text="Steve Lacy"/>
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:ellipsize="none"
-                    android:maxLines="100"
-                    android:singleLine="false"
-                    android:scrollHorizontally="false"
-                    android:text="NEED HELP ON CS465 UI HW3" />
+                <LinearLayout
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_dis4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0.65 miles away"
+                        android:layout_marginBottom="5sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/user_dis4"
+                        android:ellipsize="none"
+                        android:gravity="center_vertical"
+                        android:maxLines="100"
+                        android:scrollHorizontally="false"
+                        android:singleLine="false"
+                        android:text="Business Adminstration - '22" />
+
+                </LinearLayout>
+
             </TableRow>
         </TableLayout>
     </ScrollView>

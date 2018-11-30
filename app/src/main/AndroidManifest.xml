@@ -41,11 +41,14 @@
         <activity
             android:name=".MainProfileActivity"
             android:label="@string/title_activity_profile"></activity>
-        <activity android:name=".PeopleRequestsController" />
         <activity
             android:name=".PeoReqTabs"
             android:label="@string/title_activity_peo_req_tabs"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".SubmitRequestActivity"
+            android:label="SubmitRequest"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            />
     </application>
 
 </manifest>

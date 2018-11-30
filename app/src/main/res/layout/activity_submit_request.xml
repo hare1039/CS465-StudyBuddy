@@ -203,10 +203,40 @@
             android:background="@drawable/border"
             android:autofillHints="input request" />
     </LinearLayout>
-    <Button
+
+    <LinearLayout
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="5sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SUBMIT"
-        android:textSize="32sp"/>
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/cancel_but"
+            android:layout_width="180sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:background="@color/colorPrimary"
+            android:elevation="10dp"
+            android:text="CANCEL"
+            android:layout_marginRight="25sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/submit_but"
+            android:layout_width="180sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:text="SUBMIT"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:layout_marginRight="10sp"
+            android:elevation="10dp"
+            android:textSize="32sp" />
+
+    </LinearLayout>
 
 </LinearLayout>
