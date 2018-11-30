@@ -46,6 +46,7 @@
             android:name=".PeoReqTabs"
             android:label="@string/title_activity_peo_req_tabs"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".SelectMessageActivity"></activity>
     </application>
 
 </manifest>

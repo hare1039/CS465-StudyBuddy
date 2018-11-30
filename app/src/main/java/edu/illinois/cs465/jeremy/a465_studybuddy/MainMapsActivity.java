@@ -68,6 +68,7 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
                                 return true;
                             case R.id.messages:
                                 //TODO
+                                startActivity(new Intent(MainMapsActivity.this, SelectMessageActivity.class));
                                 return true;
                         }
                         return false;
