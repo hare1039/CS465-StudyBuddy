@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TableRow;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -37,6 +38,7 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
     private GoogleMap mMap;
     private BottomNavigationView bottomNav;
     private FloatingActionButton fab;
+
 
     // Starting location
     private LatLng grainger = new LatLng(40.112445,-88.226792);
@@ -78,7 +80,7 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
                                 return true;
                             case R.id.messages:
                                 //TODO
-                                startActivity(new Intent(MainMapsActivity.this, message_screen.class));
+                                startActivity(new Intent(MainMapsActivity.this, SelectMessageActivity.class));
                                 return true;
                         }
                         return false;
@@ -116,7 +118,7 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
         // Add a marker in Grainger and move the camera
         final float zoom = 17.1f;
 
-        mMap.addMarker(new MarkerOptions().position(grainger).title("5 Users Here"));
+        mMap.addMarker(new MarkerOptions().position(grainger).title("3 Users Nearby"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(grainger, zoom));
         final CameraUpdate start = CameraUpdateFactory.newLatLngZoom(grainger, zoom);
 

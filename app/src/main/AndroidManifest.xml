@@ -53,6 +53,8 @@
             android:label="OtherPerson" />
         <activity android:name=".message_screen"
             android:label="messaging_someone"/>
+        <activity android:name=".SelectMessageActivity"
+            android:label="Message List"/>
     </application>
 
 </manifest>
