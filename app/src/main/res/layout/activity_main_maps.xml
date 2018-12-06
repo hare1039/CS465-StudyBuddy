@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainMapsActivity" >
-
+    tools:context=".MainMapsActivity">
 
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
@@ -15,7 +14,7 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainMapsActivity"/>
+        tools:context=".MainMapsActivity" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/main_menu_nav"
@@ -38,10 +37,9 @@
         android:clickable="true"
         android:focusable="true"
         android:src="@drawable/myloc2"
+        android:visibility="invisible"
         app:backgroundTint="@color/FabBackground"
-        app:tint="@android:color/white"
-        android:visibility="invisible"/>
-
+        app:tint="@android:color/white" />
 
 
 </android.support.design.widget.CoordinatorLayout>

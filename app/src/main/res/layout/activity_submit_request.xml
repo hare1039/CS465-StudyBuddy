@@ -197,11 +197,14 @@
             android:textSize="32sp" />
 
         <EditText
+            android:id="@+id/edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textCapSentences|textAutoCorrect"
+            android:autofillHints="(Char. Limit: 140)"
             android:background="@drawable/border"
-            android:autofillHints="input request" />
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:gravity="top|left"
+            android:maxLength="140" />
     </LinearLayout>
 
     <LinearLayout

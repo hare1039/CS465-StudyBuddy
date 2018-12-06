@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
@@ -46,6 +47,8 @@ public class PeoReqTabs extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
 
+
+
         TabLayout tabLayout = (TabLayout) findViewById(R.id.peoreq_tl);
 
         tabLayout.addTab(tabLayout.newTab().setText("People"));
@@ -57,6 +60,11 @@ public class PeoReqTabs extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        if (SubmitRequestActivity.isSubmit) {
+            mViewPager.setCurrentItem(1);
+        }
+
         mViewPager.addOnPageChangeListener(new
                 TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -143,6 +151,7 @@ public class PeoReqTabs extends AppCompatActivity {
                                  Bundle savedInstanceState) {
              rootView = inflater.inflate(R.layout.activity_main_people_feed, container, false);
 
+
              tr = (TableRow) (rootView.findViewById(R.id.user_sus));
              tr.setOnClickListener(new View.OnClickListener() {
                  @Override
@@ -186,7 +195,17 @@ public class PeoReqTabs extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            rootView = inflater.inflate(R.layout.activity_main_request_feed, container, false);
+            if (SubmitRequestActivity.isSubmit) {
+                rootView = inflater.inflate(R.layout.activity_main_request_feed_2, container, false);
+                TextView my_text = (TextView) (rootView.findViewById(R.id.me_textview));
+
+                my_text.setText(SubmitRequestActivity.my_request);
+                SubmitRequestActivity.isSubmit = false;
+            }
+
+            else
+                rootView = inflater.inflate(R.layout.activity_main_request_feed, container, false);
+
 
             tr = (TableRow) (rootView.findViewById(R.id.req_sus));
             tr.setOnClickListener(new View.OnClickListener() {

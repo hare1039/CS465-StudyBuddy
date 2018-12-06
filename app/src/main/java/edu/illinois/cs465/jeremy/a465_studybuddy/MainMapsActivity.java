@@ -1,8 +1,12 @@
 package edu.illinois.cs465.jeremy.a465_studybuddy;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -17,31 +21,46 @@ import android.widget.Toast;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMapOptions;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.Circle;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
+
 
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.maps.android.ui.IconGenerator;
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import static android.view.View.*;
+import static com.google.maps.android.ui.IconGenerator.STYLE_BLUE;
+import static com.google.maps.android.ui.IconGenerator.STYLE_DEFAULT;
 
-public class MainMapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MainMapsActivity extends FragmentActivity implements OnMapReadyCallback,
+OnInfoWindowClickListener {
 
     private GoogleMap mMap;
     private BottomNavigationView bottomNav;
     private FloatingActionButton fab;
 
+    // Used to control marker interaction
+    private Marker start_pos;
+    private Marker[] other_marks = new Marker[5];
+
 
     // Starting location
     private LatLng grainger = new LatLng(40.112445,-88.226792);
+    private LatLng union = new LatLng(40.1092101,-88.2272225);
     private boolean first_move = true;
 
 
@@ -114,11 +133,15 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        mMap.setOnInfoWindowClickListener(this);
+        GoogleMapOptions opt = new GoogleMapOptions();
+        opt.zoomGesturesEnabled(true);
         // Add a marker in Grainger and move the camera
-        final float zoom = 17.1f;
+        final float zoom = 16.0f;
 
-        mMap.addMarker(new MarkerOptions().position(grainger).title("3 Users Nearby"));
+        start_pos = mMap.addMarker(new MarkerOptions()
+                .position(grainger)
+                .title("3 Users Nearby"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(grainger, zoom));
         final CameraUpdate start = CameraUpdateFactory.newLatLngZoom(grainger, zoom);
 
@@ -127,14 +150,57 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
         .radius(50.0f));
         startRad.setVisible(false);
 
-        float darker_green = 105.0f;
-        for (int i = 0; i < 4; i++) {
-            LatLng new_marker = getRandomLocation(grainger, 250);
 
-            mMap.addMarker( new MarkerOptions().position(new_marker)
-            .title("User Here")
-            .icon(getMarkerIcon("#1b7801")));
+        LatLng new_marker = getRandomLocation(grainger, 150);
+        other_marks[0] = mMap.addMarker( new MarkerOptions().position(new_marker)
+                .title("User Here"));
+        IconGenerator igen = new IconGenerator(this);
+        igen.setStyle(STYLE_BLUE);
+        Bitmap icon = igen.makeIcon("1");
+        other_marks[0].setIcon(BitmapDescriptorFactory.fromBitmap(icon));
+        other_marks[0].setSnippet("Susan Ann");
+
+        float darker_green = 105.0f;
+        for (int i = 1; i < 5; i++) {
+            new_marker = getRandomLocation(grainger, 325);
+
+            if (i == 4) {
+                other_marks[4] = mMap.addMarker(new MarkerOptions().position(union).title("Many Users Here"));
+                icon = igen.makeIcon("10+");
+                other_marks[4].setIcon(BitmapDescriptorFactory.fromBitmap(icon));
+                break;
+            }
+
+            other_marks[i] = mMap.addMarker( new MarkerOptions().position(new_marker)
+            .title("User Here"));
+            //.icon(getMarkerIcon("#1b7801")));
+
+
+
+            Random random = new Random();
+            String people_here = String.valueOf(random.ints(1,  6).findFirst().getAsInt());
+            if (!people_here.equals("1")) {
+                other_marks[i].setSnippet("Users Here");
+            }
+            icon = igen.makeIcon(people_here);
+            other_marks[i].setIcon(BitmapDescriptorFactory.fromBitmap(icon));
+
         }
+
+
+        // Try to draw a badge number for icon
+        /*Paint paint = new Paint();
+        paint.setColor(Color.BLACK);
+        paint.setTextSize(16.0f);
+        Bitmap.Config conf = Bitmap.Config.ARGB_8888;
+        Bitmap bmp = Bitmap.createBitmap(200, 50, conf);
+        Canvas canvas = new Canvas(bmp);
+
+        canvas.drawText("TEXT", 0, 50, paint); // paint defines the text color, stroke width, size*/
+
+
+
+
         //mMap.animateCamera(CameraUpdateFactory.zoomTo(zoom));
 
         //fab.setVisibility(View.INVISIBLE);
@@ -184,8 +250,9 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
 
     public LatLng getRandomLocation(LatLng point, int radius) {
 
-        List<LatLng> randomPoints = new ArrayList<>();
-        List<Float> randomDistances = new ArrayList<>();
+        //List<LatLng> randomPoints = new ArrayList<>();
+        //List<Float> randomDistances = new ArrayList<>();
+
         Location myLocation = new Location("");
         myLocation.setLatitude(point.latitude);
         myLocation.setLongitude(point.longitude);
@@ -220,5 +287,16 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
         randomDistances.add(l1.distanceTo(myLocation));*/
 
         return randomLatLng;
+    }
+
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+        if (marker.equals(start_pos)  || marker.equals(other_marks[4])) {
+            startActivity(new Intent(MainMapsActivity.this, PeoReqTabs.class));
+        }
+        if(marker.equals(other_marks[0])) {
+            startActivity(new Intent(MainMapsActivity.this, OtherProfileActivity.class));
+        }
+
     }
 }
