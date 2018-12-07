@@ -137,7 +137,6 @@
             android:text="MESSAGE"
             android:textColor="@android:color/white"
             android:background="@color/colorPrimary"
-            android:layout_marginRight="10sp"
             android:elevation="10dp"
             android:textSize="32sp" />
 
