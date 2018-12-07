@@ -149,16 +149,32 @@ public class PeoReqTabs extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-             rootView = inflater.inflate(R.layout.activity_main_people_feed, container, false);
+            rootView = inflater.inflate(R.layout.activity_main_people_feed, container, false);
 
 
-             tr = (TableRow) (rootView.findViewById(R.id.user_sus));
-             tr.setOnClickListener(new View.OnClickListener() {
+            tr = (TableRow) (rootView.findViewById(R.id.user_sus));
+            tr.setOnClickListener(new View.OnClickListener() {
                  @Override
                  public void onClick(View v) {
                      startActivity(new Intent(rootView.getContext(), OtherProfileActivity.class));
                  }
-             });
+            });
+
+            tr = (TableRow) (rootView.findViewById(R.id.user_clark));
+            tr.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(rootView.getContext(), ClarkProfileActivity.class));
+                 }
+            });
+
+            tr = (TableRow) (rootView.findViewById(R.id.user_leaf));
+            tr.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(rootView.getContext(), LeafProfileActivity.class));
+                }
+            });
             //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
@@ -212,6 +228,14 @@ public class PeoReqTabs extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(rootView.getContext(), OtherProfileActivity.class));
+                }
+            });
+
+            tr = (TableRow) (rootView.findViewById(R.id.req_clark));
+            tr.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(rootView.getContext(), ClarkProfileActivity.class));
                 }
             });
 

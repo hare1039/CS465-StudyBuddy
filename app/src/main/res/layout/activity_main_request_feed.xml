@@ -64,11 +64,11 @@
                     android:layout_height="100dp"
                     android:gravity="center"
                     android:orientation="vertical">
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="100dp"
                         android:layout_height="80dp"
                         android:gravity="center"
-                        android:src="@drawable/profile" />
+                        android:src="@drawable/profile_icon_jerry" />
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="20dp"
@@ -89,6 +89,7 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/req_clark"
                 android:layout_margin="4dp"
                 android:background="@drawable/border"
                 android:clickable="true"
@@ -98,11 +99,11 @@
                     android:layout_height="100dp"
                     android:gravity="center"
                     android:orientation="vertical">
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="100dp"
                         android:layout_height="80dp"
                         android:gravity="center"
-                        android:src="@drawable/profile" />
+                        android:src="@drawable/profile_icon_tom" />
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="20dp"

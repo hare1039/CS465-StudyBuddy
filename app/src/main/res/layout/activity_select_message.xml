@@ -39,7 +39,7 @@
                 android:textStyle="bold"
                 android:textColor="@android:color/white"/>
 
-    1   </android.support.v7.widget.Toolbar>
+        </android.support.v7.widget.Toolbar>
 
 
         <ScrollView
@@ -67,11 +67,11 @@
                         android:gravity="center"
                         android:layout_weight="0"
                         android:orientation="vertical">
-                        <ImageView
+                        <de.hdodenhof.circleimageview.CircleImageView
                             android:layout_width="100dp"
                             android:layout_height="80dp"
                             android:gravity="center"
-                            android:src="@drawable/profile" />
+                            android:src="@drawable/profile_icon_jerry" />
                         <TextView
                             android:layout_width="100dp"
                             android:layout_height="20dp"
