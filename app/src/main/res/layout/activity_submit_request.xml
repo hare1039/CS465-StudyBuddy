@@ -42,7 +42,28 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="CS465"
+                        android:text="CS200"
+                        android:textSize="25sp"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="#FF000000" />
+                <TableRow
+                    android:clickable="true"
+                    android:spinnerMode="dialog"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CS425"
                         android:textSize="25sp"/>
                     <CheckBox
                         android:layout_width="wrap_content"
@@ -84,7 +105,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="CS465"
+                        android:text="CS466"
                         android:textSize="25sp"/>
                     <CheckBox
                         android:layout_width="wrap_content"
@@ -105,7 +126,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="CS465"
+                        android:text="CS467"
                         android:textSize="25sp"/>
                     <CheckBox
                         android:layout_width="wrap_content"
@@ -126,7 +147,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="CS465"
+                        android:text="CS468"
                         android:textSize="25sp"/>
                     <CheckBox
                         android:layout_width="wrap_content"
@@ -147,28 +168,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="CS465"
-                        android:textSize="25sp"/>
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"/>
-                </TableRow>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dip"
-                    android:background="#FF000000" />
-                <TableRow
-                    android:clickable="true"
-                    android:spinnerMode="dialog"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal">
-                    <Space
-                        android:layout_width="15dp"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="CS465"
+                        android:text="CS469"
                         android:textSize="25sp"/>
                     <CheckBox
                         android:layout_width="wrap_content"
